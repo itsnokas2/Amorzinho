@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surpresa para o Meu Amorzinho</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+ body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('back3.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.container {
+  text-align: center;
+}
+
+.content {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#nao {
+  position: relative;
+  background-color: #FF5733; 
+}
+
+#nao:hover {
+  left: calc(50% - 100px);
+  top: -20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <h1>Amorzinho, aceitas aturar-me para o resto da tua vida?</h1>
+    <img src="gatinho.gif" alt="Gatinho fofo">
+    <div class="buttons">
+      <button id="sim">Sim</button>
+      <button id="nao">Não</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('sim').addEventListener('click', function() {
+  window.location.href = 'sim.html';
+});
+
+document.getElementById('nao').addEventListener('mouseover', function() {
+  let containerWidth = document.querySelector('.container').offsetWidth;
+  let containerHeight = document.querySelector('.container').offsetHeight;
+  
+
+  let maxX = containerWidth - this.offsetWidth;
+  let maxY = containerHeight - this.offsetHeight;
+
+
+  let newX = Math.random() * maxX;
+  let newY = Math.random() * maxY;
+
+  this.style.left = newX + 'px';
+  this.style.top = newY + 'px';
+});
+  </script>
+<script src="script.js"></script>
+</body>
+</html>

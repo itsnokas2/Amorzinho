@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mensagem Especial</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .message {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .heart {
+    color: red;
+    font-size: 48px;
+    animation: heartbeat 1s infinite;
+  }
+
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  .our-image {
+    margin-top: 20px;
+    width: 300px;
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="message">
+    <div class="heart">&hearts;</div>
+    <h2>Amo-te muito, seu preguiçoso!</h2>
+    <img src="IMG_3799.jpeg" alt="Foto nossa" class="our-image">
+  </div>
+</div>
+</body>
+</html>
